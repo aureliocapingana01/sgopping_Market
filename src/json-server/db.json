@@ -1,0 +1,112 @@
+{
+	"produtos": [
+		{
+			"id": 1,
+			"name": "Blusao do Ac Milan branco",
+			"description": "blusao do milan branca 100% algodão",
+			"price": 400.90,
+			"quantity": 10,
+			"category": "blusao",
+			"image": "blusao_milan_branco"
+		},
+		{
+			"id": 2,
+			"name": "Bone-barcelona",
+			"description": "Bone do brcelonar, pra melhor ver o jogos nos sol ",
+			"price": 100.30,
+			"quantity": 14,
+			"category": "bone",
+			"image": "bone_barcelona"
+		},
+		{
+			"id": 3,
+			"name": "Camisa do Barcelona",
+			"description": "camisa do Barcelona 100% algodão",
+			"price": 400.90,
+			"quantity": 15,
+			"category": "camisa",
+			"image": "camisa_barcelona"
+		},
+		{
+			"id": 4,
+			"name": "Camisa Borussia Dortmund",
+			"description": "camisa do Borussia dortmund",
+			"price": 300.50,
+			"quantity": 20,
+			"category": "camisa",
+			"image": "camisa_borussia_dortmund"
+		},
+		{
+			"id": 5,
+			"name": "Camisa-milan",
+			"description": "camisa do milan",
+			"price": 390.10,
+			"quantity": 19,
+			"category": "camisa do milan",
+			"image": "camisa_milan"
+		},
+		{
+			"id": 6,
+			"name": "Camisa Manchester City",
+			"description": "Camisa da puma do Manchester City",
+			"price": 399.99,
+			"quantity": 17,
+			"category": "camisa",
+			"image": "camisa_puma_manchester_city"
+		},
+		{
+			"id": 7,
+			"name": "Estojo Barcelona",
+			"description": "estojo do barceolona, pra melhor praticidade",
+			"price": 99.99,
+			"quantity": 22,
+			"category": "estojo",
+			"image": "estojo_barcelona"
+		},
+		{
+			"id": 8,
+			"name": "Jaqueta do Arsenal",
+			"description": "jaqueta do arsenal 100% algodão, pra os dias frios europeus",
+			"price": 499.50,
+			"quantity": 13,
+			"category": "jaqueta",
+			"image": "jaqueta_arsenal"
+		},
+		{
+			"id": 9,
+			"name": "Mala Bayer de Munique",
+			"description": "mala do bayer de munique, nada melhor que viajar com seu time estapando na sua mala",
+			"price": 299.90,
+			"quantity": 11,
+			"category": "mala",
+			"image": "mala_bayern_de_munique"
+		},
+		{
+			"id": 10,
+			"name": "Mbappe",
+			"description": "nova camisa de mbappe",
+			"price": 459.99,
+			"quantity": 6,
+			"category": "camisa",
+			"image": "mbappe"
+		},
+		{
+			"id": 11,
+			"name": "Rodrigo",
+			"description": "nova camisa de rodrigo",
+			"price": 359.99,
+			"quantity": 16,
+			"category": "camisa",
+			"image": "rodrygo"
+		},
+		{
+			"id": 12,
+			"name": "Vinijr",
+			"description": "nova camisa de vini jr",
+			"price": 409.99,
+			"quantity": 11,
+			"category": "camisa",
+			"image": "vini_jr"
+		}
+	]
+}
