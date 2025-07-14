@@ -8,8 +8,9 @@ const findAll = async () => {
 };
 
 const searchName = async (name: string) => {
-	const response = await http.get<ProdutoProps[]>(`produto?name${name}`);
+	const response = await http.get<ProdutoProps[]>(`produtos?name=${name}`);
 
+	console.log(response.data);
 	return response.data;
 };
 

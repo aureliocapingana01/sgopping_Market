@@ -1,6 +1,6 @@
 // import { useEffect } from "react"
 import Cards from "../components/Cards";
-import findAll from "../service/produto.service";
+// import findAll from "../service/produto.service";
 import { useQuery } from "react-query";
 import type { ProdutoProps } from "../interface/produto";
 import produtoService from "../service/produto.service";

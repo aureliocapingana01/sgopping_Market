@@ -3,23 +3,31 @@ import Input from "./Input";
 import produtoService from "../service/produto.service";
 import { type ProdutoProps } from "../interface/produto";
 import { useState, type ChangeEvent } from "react";
+import { debounce } from "lodash";
 
 const Header = () => {
-
-	const [produtoName, setProdutoName] = useState('')
+	const [produtoName, setProdutoName] = useState("");
 
 	const {
-		data: produtoByName,
+		data: produtosByName,
 		isLoading,
 		error,
-	} = useQuery<ProdutoProps[], Error>("query-produto-by-name", async () => {
-		return produtoService.searchName(produtoName);
-	});
+	} = useQuery<ProdutoProps[], Error>(
+		["query-produtos-by-name", produtoName],
+		async () => {
+			return produtoService.searchName(produtoName);
+		},
+		{
+			enabled: produtoName.length > 0,
+		},
+	);
 
 	const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
-		const value = e.target.value
-		setProdutoName(value)
-	}
+		const value = e.target.value;
+		setProdutoName(value);
+	};
+
+	const debounceHandleOnChange = debounce(handleInput, 500);
 
 	return (
 		<header className="fixed top-0 right-0 flex w-full justify-center bg-white py-3">
@@ -34,17 +42,11 @@ const Header = () => {
 					</a>
 				</div>
 				<div className="w-4/5">
-					<Input onChange={(e) => handleInput(e)} />
+					<Input onChange={debounceHandleOnChange} />
 					<ul>
-						{
-							produtoByName?.map((produto: ProdutoProps) => {
-								return (
-									<li>
-										{produto.name}
-									</li>
-								)
-							})
-						}
+						{produtosByName?.map((produto: ProdutoProps) => {
+							return <li key={produto.id}>{produto.name}</li>;
+						})}
 					</ul>
 				</div>
 				<div>Carrinho</div>
